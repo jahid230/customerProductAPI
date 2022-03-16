@@ -1,0 +1,2 @@
+package com.springBootIntro.CustomerProductAuthenticationAPI.securityAuth;public class CustomeAPIAdminDetailsService {
+}
