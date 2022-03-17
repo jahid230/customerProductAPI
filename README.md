@@ -9,7 +9,7 @@ It's Spring Boot 2 project with protected JWT authentication enable for mutable 
 
  sudo ss -lptn 'sport = :5432' 
  
- sudo kill<pid>
+ sudo kill pid_number
   
 
 The application can be run in any system having docker and Postman installed. The application shoud start via the following command:
@@ -23,7 +23,7 @@ The all the public API documentation for the customer and Product is available o
 http://localhost:8081/api/v1/swagger-ui/index.html
 
 All Publicly accesses APIs are:
-## [Get Mapping]
+## [Get,POST Mapping]
 http://localhost:8081/api/v1/customers 
 http://localhost:8081/api/v1/customers/{CustomerId}
 http://localhost:8081/api/v1/products
