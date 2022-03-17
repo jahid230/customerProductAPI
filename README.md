@@ -1,8 +1,15 @@
 # customerProductAPI
 It's Spring Boot 2 project with protected JWT authentication enable for mutable REST API endpoints.
 
-#Running The Application
+## Running The Application
 
+./mvnw clean install -DskipTests=true
+
+### If port binding is failed for Postgres then run:
+
+ sudo ss -lptn 'sport = :5432' 
+ sudo kill<pid>
+  
 
 The application can be run in any system having docker and Postman installed. The application shoud start via the following command:
 
