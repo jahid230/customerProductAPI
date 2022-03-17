@@ -111,11 +111,7 @@ public class CustomerService {
         }
 
     }
-/*
-* try{} catch (ExceptionResponse e){
-            throw new ExceptionResponse(new Date(),e.getMessage(),e.getDetails());
-        }
-* */
+
 
     public Customer updateCustomer(UpdateCustomerRequest updateCustomerRequest){
         try{
@@ -163,76 +159,5 @@ public class CustomerService {
             throw new ExceptionResponse(new Date(),ex.getLocalizedMessage(),ex.getCause().getMessage());
         }
     }
-/*
-    public Customer updateCustomer(UpdateCustomerRequest updateCustomerRequest){
-
-        Customer Customer=studentRepository.findById(updateStudentRequest.getId()).get();
-
-        if(updateStudentRequest.getFirst_name() !=null && !updateStudentRequest.getFirst_name().isEmpty()){
-            student.setFirstName(updateStudentRequest.getFirst_name());
-        }
-        student= studentRepository.save(student);
-        return student;
-    }
-
-    public String deleteStudent(Long id){
-        studentRepository.deleteById(id);
-        return "Deleted the Student";
-    }
-
-    public List<Student> getStudentByFirstName(String firstName){
-        List<Student>  students= studentRepository.findByFirstName(firstName);
-        return students;
-    }
-    public List<Student> getStudentByEmail(String email){
-        List<Student>  students= studentRepository.findByEmail(email);
-        return students;
-    }
-
-    public Student getStudentByFirstNameAndLastName(String firstName, String lastName){
-        Student  student= studentRepository.findByFirstNameAndLastName(firstName,lastName);
-        return student;
-    }
-
-
-
-    public List<Student> getInQueryFirstNames(InQueryRequest inQueryRequest){
-        return studentRepository.findByFirstNameIn(inQueryRequest.getFirstnames());
-    }
-
-    public List<Student> getStudentPagination(int pageNo,int pageSize){
-        Pageable pageable= PageRequest.of(pageNo-1,pageSize);
-        return studentRepository.findAll(pageable).getContent();
-    }
-
-    public List<Student> getStudentsWithSorting(){
-        Sort sort=Sort.by(Sort.Direction.ASC, "firstName");
-        return studentRepository.findAll(sort);
-    }
-
-    public List<Student> like(String firstName){
-
-        List<Student> students=studentRepository.findByFirstNameContains(firstName);
-        return students;
-
-    }
-
-    public List<Student> startsWith(String firstName){
-
-        List<Student> students=studentRepository.findByFirstNameStartsWith(firstName);
-        return students;
-
-    }
-    public Integer updateStudentWithJpql(@PathVariable Long id, @PathVariable String firstName){
-        return studentRepository.updateFirstName(id, firstName);
-    }
-
-    public List<Student> getByAddressCity(String city){
-
-        List<Student> students= studentRepository.getByAddressCity(city);
-        return students;
-
-    }
-*/
 
 }
