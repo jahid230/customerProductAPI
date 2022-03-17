@@ -61,6 +61,8 @@ public class SpringAuthConfigurar extends WebSecurityConfigurerAdapter {
             .authorizeRequests()
             .antMatchers(SWAGGER_WHITELIST).permitAll()
             .antMatchers(HttpMethod.GET,"/customers").permitAll()
+                .antMatchers(HttpMethod.POST,"/customers").permitAll()
+                .antMatchers(HttpMethod.POST,"/customers/{CustomerId}/products").permitAll()
               .antMatchers(HttpMethod.GET,"/products").permitAll()
             .antMatchers("/login")
             .permitAll()
