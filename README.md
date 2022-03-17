@@ -3,6 +3,14 @@ It's Spring Boot 2 project with protected JWT authentication enable for mutable 
 
 #Running The Application
 
+./mvnw clean install -DskipTests=true
+
+If port binding is failed for Postgres then run:
+
+## sudo ss -lptn 'sport = :5432' 
+then:
+## sudo kill<pid>
+  
 
 The application can be run in any system having docker and Postman installed. The application shoud start via the following command:
 
